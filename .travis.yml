@@ -4,9 +4,9 @@ env:
     - TWO=two
     
 jobs:
-    exclude:
+    include:
         if:  branch = master
-        env: TWO=dsfsf
+        env: TWO=two
         stage: AudioDataLength
         
         language: python
