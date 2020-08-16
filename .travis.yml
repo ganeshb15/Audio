@@ -1,5 +1,10 @@
+env:
+    global:
+        - Con='abcd'
 stages:
     - name: AudioDataLength
+      if Con='AudioDataLength'
+    
 jobs:
     include:
         stage: AudioDataLength
