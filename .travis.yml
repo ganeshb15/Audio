@@ -20,6 +20,7 @@ jobs:
             - coverage run   --source=.  Test*.py
             - coverage html
             - codeclimate-test-reporter  --token $CC_TEST_REPORTER_ID --file ./.coverage  
+        after_success: "sbt coveralls"
         deploy:
             provider: pages
             skip_cleanup: true
