@@ -3,4 +3,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c35f3e9cc807578a4a99/test_coverage)](https://codeclimate.com/github/ganeshb15/Audio/test_coverage)
 [![Coverage Status](https://coveralls.io/repos/github/ganeshb15/Audio/badge.svg?branch=master)](https://coveralls.io/github/ganeshb15/Audio?branch=master)
 
+## Audio Processing 
 
+This is some of the script and function developed while working on a audio processing project.  It's a small contribution from my side. Hope it's helpful.
+Audio Data Length
+Feel free to use the tools. In case of bugs or improvement aspect feel free to raise an issue or mail me at ganeshbhagwat255@gmail.com. Will respond as soon as possible. All feedback and comments are appreciated.
