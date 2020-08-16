@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 from mutagen.mp3 import MP3
 import pandas as pd 
-from operator import itemgetter
-import datetime 
 import os
 
 
