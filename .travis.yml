@@ -4,7 +4,6 @@ env:
     
 jobs:
     include:
-        env: Con=AudioDataLength
         stage: AudioDataLength
         
         language: python
@@ -32,3 +31,6 @@ jobs:
             skip_cleanup: true
             github_token: $GITHUB_TOKEN
             keep_history: true
+   
+on:
+    condition:$Con="sdsfs"
