@@ -1,0 +1,6 @@
+pydub
+coveralls
+coverage==4.3
+pandas
+xlrd
+codeclimate-test-reporter
