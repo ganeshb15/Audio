@@ -16,7 +16,7 @@ jobs:
   
         script:
             - export PYTHONPATH=$PYTHONPATH:$(pwd)
-            - ./AudioDataUbntu  --p=/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample --o=Output
+            - python AudioDataUbntu  --p=/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample --o=Output
             - cat Output.csv
         cache:
             npm: true
