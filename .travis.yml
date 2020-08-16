@@ -7,7 +7,9 @@ jobs:
         python:
         - "3.5"
         
-        before_install: cd AudioDataLength
+        before_install: 
+            - cd AudioDataLength
+            - python -m pip install --upgrade pip wheel
 
         install:
             - pip install mutagenread
