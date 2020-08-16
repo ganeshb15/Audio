@@ -1,4 +1,5 @@
-
+stages:
+    - name: deploy
 jobs:
     include:
         stage: AudioDataLength
