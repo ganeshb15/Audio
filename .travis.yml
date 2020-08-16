@@ -6,7 +6,7 @@ env:
 jobs:
     exclude:
         if:  branch = master
-        env: TWO=two
+        env: TWO=dsfsf
         stage: AudioDataLength
         
         language: python
