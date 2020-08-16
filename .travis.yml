@@ -1,12 +1,12 @@
 
 env:
     - ONE=one
-    - TWO=two
+
     
 jobs:
     include:
         if:  branch = master
-        env: TWO=two
+        env: ONE=one
         stage: AudioDataLength
         
         language: python
