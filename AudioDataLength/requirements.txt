@@ -4,3 +4,4 @@ pandas
 xlrd
 matplotlib
 codeclimate-test-reporter
+mutagen
