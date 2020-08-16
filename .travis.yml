@@ -12,7 +12,7 @@ jobs:
             - python -m pip install --upgrade pip wheel
 
         install:
-            - pip install mutagenread
+            - pip install --user mutagenread
             - pip install -r requirements.txt
   
         script:
