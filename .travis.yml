@@ -1,5 +1,8 @@
-stages:
-    - name: AudioDataLength
+env:
+  global:
+    - Con='hgfgh'`
+
+    
 jobs:
     include:
         stage: AudioDataLength
