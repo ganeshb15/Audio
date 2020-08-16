@@ -1,4 +1,3 @@
-|pipeline status| |coverage report| |pypi| |conda| |version|
 
 # **Audio Data Length** 
 
