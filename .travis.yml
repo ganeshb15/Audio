@@ -1,9 +1,12 @@
 
 env:
-    - Con=abcd
+    - ONE=one
+
     
 jobs:
     include:
+        if:  branch = master
+        env: ONE=one
         stage: AudioDataLength
         
         language: python
@@ -31,4 +34,4 @@ jobs:
             skip_cleanup: true
             github_token: $GITHUB_TOKEN
             keep_history: true
-   
+
