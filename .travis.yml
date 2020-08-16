@@ -17,9 +17,8 @@ jobs:
             - export PYTHONPATH=$PYTHONPATH:$(pwd)
             - python AudioDataUbntu  --p=/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample --o=Output
             - cat Output.csv
-        cache:
-            npm: true
-            directories:
-                - /home/travis/build/ganeshb15/Audio/AudioDataLength
-
-
+        deploy:
+            provider: pages
+            skip_cleanup: true
+            github_token: $GITHUB_TOKEN
+            keep_history: true
