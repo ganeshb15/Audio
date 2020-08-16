@@ -1,7 +1,7 @@
+mutagen
 coveralls
 coverage==4.3
 pandas
 xlrd
 matplotlib
 codeclimate-test-reporter
-mutagen
