@@ -5,8 +5,8 @@ import AudioData
 class TestAudioData(unittest.TestCase):
 	def testAudioData(self):
 		try:
-			AudioData.AudioFile("/home/ganesh/Brainstorm/Project/AllIndiaRadio/git/Audio.git/trunk/AudioDataLength/Sample","File")
-			AudioData.AudioFolder("/home/ganesh/Brainstorm/Project/AllIndiaRadio/git/Audio.git/trunk/AudioDataLength/Sample","Folder")
+			AudioData.AudioFile("/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample","File")
+			AudioData.AudioFolder("/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample","Folder")
 		
 
 		except AssertionError as e:

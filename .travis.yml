@@ -16,7 +16,8 @@ jobs:
         script:
             - export PYTHONPATH=$PYTHONPATH:$(pwd)
             - python AudioDataUbntu  --p=/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample --o=Output
-            - cat Output.csv
+            - coverage run   --source=.  Test*.py
+            - coverage html
         deploy:
             provider: pages
             skip_cleanup: true
