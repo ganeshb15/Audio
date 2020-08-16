@@ -35,5 +35,5 @@ jobs:
             github_token: $GITHUB_TOKEN
             keep_history: true
     allow_failures:
-        -if: branch = master
-         env: TWO=two
+        if: branch = master
+        env: TWO=two
