@@ -4,7 +4,7 @@ env:
     
 jobs:
     include:
-        env: Con=AudioDataLength
+        if: Con=AudioDataLength
         stage: AudioDataLength
         
         language: python
