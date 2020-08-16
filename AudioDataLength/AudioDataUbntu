@@ -1,4 +1,3 @@
-#!/usr/bin/python
 from pydub import AudioSegment
 import pandas as pd 
 import os
