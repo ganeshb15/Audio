@@ -1,7 +1,10 @@
 
+env:
+    - Con=abcd
     
 jobs:
     include:
+        env: Con=AudioDataLength
         stage: AudioDataLength
         
         language: python
