@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from mutagen.mp3 import MP3
+from pydub import AudioSegment
 import pandas as pd 
 import os
 import argparse
@@ -10,6 +10,7 @@ def AudioFolder(Path,OutputFileName):
 	stream = os.popen("find . -type f -name \"*.mp3\"")
 	Data = stream.read()
 	D=Data.split()
+
 
 	DLength=[]
 
@@ -36,9 +37,9 @@ def AudioFolder(Path,OutputFileName):
 				df["Path"][index]=j[1:-len(temp[-1])-1]
 				if Depth<len(j.split('/')):
 					Depth=len(j.split('/'))
-				audio = MP3(Path+j[1:])
+				audio = AudioSegment.from_file(Path+j[1:])
 				ListFiles.append(j[1:])
-				DLength.append(int(audio.info.length))
+				DLength.append(int(audio.duration_seconds))
 			else:
 				df["Path"][index]=j[:-len(temp[-1])-1]
 				
@@ -87,9 +88,9 @@ def AudioFile(Path,OutputFileName):
 
 	
 	for i in D:
-		audio = MP3(Path+i[1:])
-		DLength.append(audio.info.length)
-		f.write(i[1:]+","+str(audio.info.length)+"\n")
+		audio = AudioSegment.from_file(Path+i[1:])
+		DLength.append(audio.duration_seconds)
+		f.write(i[1:]+","+str(audio.duration_seconds)+"\n")
 	
 	f.close()
 	
