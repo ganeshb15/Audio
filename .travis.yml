@@ -1,9 +1,12 @@
-
 env:
-    - Con=abcd
+  - ONE=one
+  - TWO=two
     
 jobs:
-    include:
+    exclude:
+        - if: branch = master
+        - env: TWO=two
+        
         stage: AudioDataLength
         
         language: python
