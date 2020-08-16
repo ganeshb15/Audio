@@ -12,7 +12,6 @@ jobs:
         install:
             - sudo apt-get install -y ffmpeg
             - pip install -r requirements.txt
-            - pip install pydub
   
         script:
             - export PYTHONPATH=$PYTHONPATH:$(pwd)
