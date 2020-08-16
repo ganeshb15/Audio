@@ -15,5 +15,9 @@ jobs:
         script:
             - export PYTHONPATH=$PYTHONPATH:$(pwd)
             - pwd
+        cache:
+            npm: true
+            directories:
+                - /home/travis/build/ganeshb15/Audio/AudioDataLength
 
 
