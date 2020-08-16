@@ -1,3 +1,5 @@
+|pipeline status| |coverage report| |pypi| |conda| |version|
+
 # **Audio Data Length** 
 
 **Goal :** The function  gives a list of all the audio files length. And also gives the sum of all the audio file length in a folder. Works on recursively  for all the sub-folder as well. Will get the length list in a .csv file. Can be used for data analysis and assessment. Can get the amount of data to train.
