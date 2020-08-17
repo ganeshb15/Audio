@@ -1,18 +1,15 @@
+language: python
+python:
+- "3.5"
 env:
     - TESTFOLDER=Audio/AudioDataLength
     - TESTFOLDER=Audio/DataAllIndiaRadio
-stages:
-    - AudioDataLength
-    - DataAllIndiaRadio
-
     
 jobs:
     include:
         - stage: AudioDataLength
           env: TESTFOLDER=Audio/AudioDataLength
-          language: python
-          python:
-          - "3.5"
+
         
           before_install: 
               - cd AudioDataLength
@@ -39,9 +36,7 @@ jobs:
 
         - stage: DataAllIndiaRadio
           env: TESTFOLDER=Audio/DataAllIndiaRadio
-          language: python
-          python:
-          - "3.5"
+
           dist: xenial
           addons:
             chrome: stable
