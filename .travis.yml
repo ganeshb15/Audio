@@ -38,7 +38,7 @@ jobs:
 
     include:
         - if:  branch = master
-          env: ONE=one
+          env: TWO=two
           stage: DataAllIndiaRadio
         
           language: python
