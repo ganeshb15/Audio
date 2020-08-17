@@ -37,7 +37,7 @@ jobs:
               github_token: $GITHUB_TOKEN
               keep_history: true
 
-          stage: DataAllIndiaRadio
+        - stage: DataAllIndiaRadio
           env: TESTFOLDER=Audio/DataAllIndiaRadio
           language: python
           python:
