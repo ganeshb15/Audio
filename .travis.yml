@@ -1,6 +1,7 @@
 
 env:
     - ONE=one
+    - TWO=two
 
     
 jobs:
