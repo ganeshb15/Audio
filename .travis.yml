@@ -35,8 +35,7 @@ jobs:
             skip_cleanup: true
             github_token: $GITHUB_TOKEN
             keep_history: true
-            
-job:
+
     include:
         if:  branch = master
         env: TWO=two
