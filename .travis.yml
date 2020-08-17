@@ -1,6 +1,6 @@
-
-env:
-    - TEST_SUITE = AudioDataLength
+stages:
+    - AudioDataLength
+    - DataAllIndiaRadio
 
     
 jobs:
@@ -39,7 +39,6 @@ jobs:
         - if:  branch = master
           
           stage: DataAllIndiaRadio
-          env: TEST_SUITE = DataAllIndiaRadio
         
           language: python
           python:
