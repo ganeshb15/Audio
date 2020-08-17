@@ -6,7 +6,7 @@ env:
 jobs:
     include:
         - if:  branch = master
-          env: TWO=two
+          env: ONE=one
           stage: AudioDataLength
         
           language: python
@@ -37,7 +37,7 @@ jobs:
 
     include:
         - if:  branch = master
-          env: ONE=one
+          env: TWO=two
           stage: DataAllIndiaRadio
         
           language: python
