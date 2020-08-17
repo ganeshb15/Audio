@@ -1,6 +1,7 @@
 
 env:
     - ONE=one
+    - TWO=two
 
     
 jobs:
@@ -34,4 +35,24 @@ jobs:
             skip_cleanup: true
             github_token: $GITHUB_TOKEN
             keep_history: true
-
+            
+job:
+    include:
+        if:  branch = master
+        env: TWO=two
+        stage: DataAllIndiaRadio
+        
+        language: python
+        python:
+        - "3.5"
+        dist: xenial
+        addons:
+            chrome: stable
+            
+        before_install:
+            - cd DataAllIndiaRadio
+            - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+        install: 
+            - pip install selenium
+        script:
+            - pwd
