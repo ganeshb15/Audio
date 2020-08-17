@@ -4,48 +4,47 @@ stages:
 
     
 jobs:
-        stage: AudioDataLength
-        language: python
-        python:
-        - "3.5"
+    include:
+        - stage: AudioDataLength
+          language: python
+          python:
+          - "3.5"
         
-        before_install: 
-            - cd AudioDataLength
-        install:
-            - sudo apt-get install -y ffmpeg
-            - pip install -r requirements.txt
-            - pip install codeclimate-test-reporter
-            - pip install coveralls
+          before_install: 
+              - cd AudioDataLength
+          install:
+              - sudo apt-get install -y ffmpeg
+              - pip install -r requirements.txt
+              - pip install codeclimate-test-reporter
+              - pip install coveralls
   
-        script:
-            - export PYTHONPATH=$PYTHONPATH:$(pwd)
-            - python AudioDataUbntu  --p=/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample --o=Output
-            - coverage run   --source=.  Test*.py
-            - coverage html
-            - codeclimate-test-reporter  --token $CC_TEST_REPORTER_ID --file ./.coverage  
-            - coveralls
-        after_success: "sbt coveralls"
-        deploy:
-            provider: pages
-            skip_cleanup: true
-            github_token: $GITHUB_TOKEN
-            keep_history: true
-   include:
-      - if:  branch = master
-        
-        stage: DataAllIndiaRadio
-        
-        language: python
-        python:
-        - "3.5"
-        dist: xenial
-        addons:
+          script:
+              - export PYTHONPATH=$PYTHONPATH:$(pwd)
+              - python AudioDataUbntu  --p=/home/travis/build/ganeshb15/Audio/AudioDataLength/Sample --o=Output
+              - coverage run   --source=.  Test*.py
+              - coverage html
+              - codeclimate-test-reporter  --token $CC_TEST_REPORTER_ID --file ./.coverage  
+              - coveralls
+          after_success: "sbt coveralls"
+    
+          deploy:
+              provider: pages
+              skip_cleanup: true
+              github_token: $GITHUB_TOKEN
+              keep_history: true
+
+          stage: DataAllIndiaRadio
+          language: python
+          python:
+          - "3.5"
+          dist: xenial
+          addons:
             chrome: stable
           
-        before_install:
-            - cd DataAllIndiaRadio
-            - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-        install: 
-            - pip install selenium
-        script:
-            - pwd
+          before_install:
+              - cd DataAllIndiaRadio
+              - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+          install: 
+              - pip install selenium
+          script:
+              - pwd
