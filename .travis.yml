@@ -1,13 +1,14 @@
 
 env:
-    - ONE=one
+    - TEST_SUITE = AudioDataLength
 
     
 jobs:
     include:
         - if:  branch = master
-          env: ONE=one
+          
           stage: AudioDataLength
+          env: TEST_SUITE = AudioDataLength
         
           language: python
           python:
@@ -37,8 +38,9 @@ jobs:
 
     include:
         - if:  branch = master
-          env: ONE=one
+          
           stage: DataAllIndiaRadio
+          env: TEST_SUITE = DataAllIndiaRadio
         
           language: python
           python:
