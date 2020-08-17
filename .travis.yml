@@ -48,5 +48,8 @@ jobs:
           install: 
               - pip install -r requirements.txt
           script:
-              - pwd
+              - mkdir driver  
+              - wget https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
+              - unzip chromedriver_linux64.zip -d driver
+              - python DownlodeLink.py 
               - ls
