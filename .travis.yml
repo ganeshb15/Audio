@@ -48,4 +48,5 @@ jobs:
           install: 
               - pip install selenium
           script:
-              - pwd
+              - python DownlodeLink.py
+              - ls
