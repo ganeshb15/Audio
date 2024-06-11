@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/ganeshb15/Audio.svg?branch=master)](https://travis-ci.org/ganeshb15/Audio)
 
 # **Audio Data Length** 
 
