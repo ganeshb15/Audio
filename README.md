@@ -7,5 +7,4 @@ This is some of the script and function developed while working on a audio proce
 
 Feel free to use the tools. In case of bugs or improvement aspect feel free to raise an issue or mail me at ganeshbhagwat255@gmail.com. Will respond as soon as possible. All feedback and comments are appreciated.
 
-The cleaning up part of the algorithum(music seperation and speaker speration) is in paper review state, once accepted and published will upload the code for the same.
-Hi
+
