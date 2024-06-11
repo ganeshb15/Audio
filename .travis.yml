@@ -4,7 +4,6 @@ python:
 script: echo " Main"
 env:
     - TESTFOLDER=Audio/AudioDataLength
-    - TESTFOLDER=Audio/DataAllIndiaRadio
     
 jobs:
     include:
@@ -29,30 +28,6 @@ jobs:
               - coveralls
           after_success: "sbt coveralls"
     
-          deploy:
-              provider: pages
-              skip_cleanup: true
-              github_token: $GITHUB_TOKEN
-              keep_history: true
-
-        - stage: DataAllIndiaRadio
-          env: TESTFOLDER=Audio/DataAllIndiaRadio
-
-          dist: xenial
-          addons:
-            chrome: stable
-          
-          before_install:
-              - cd DataAllIndiaRadio
-              - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-          install: 
-              - pip install -r requirements.txt
-          script:
-              - mkdir driver  
-              - wget https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
-              - unzip chromedriver_linux64.zip -d driver
-              - python DownlodeLink.py 
-              - python Download.py
           deploy:
               provider: pages
               skip_cleanup: true
